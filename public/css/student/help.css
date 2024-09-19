@@ -1,0 +1,268 @@
+@font-face {
+    font-family: font;
+    src: url(Fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
+*{
+    font-family: font;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+}
+
+.navigation{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(248,248,248,255);
+}
+
+.navigation li{
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+}
+
+
+
+.navigation li:hover {
+    background-color: rgba(0, 0, 0, 0.513);
+    border-radius: 15px;
+    transition-duration: 0.8s;
+}
+
+.navigation li.login{
+    background-color: rgba(88, 188, 155, 0.5);
+    border-radius: 15px;
+}
+
+.navigation li a{
+    color: white;
+    font-weight: 500;
+}
+
+.navigation li a:hover{
+    color:rgba(153,255,205,255);
+}
+
+.first {
+    background-image: url("../../images/5.jpeg");
+    margin-bottom: 100px;
+}
+
+.aftermain1 {
+    display: flex;
+    height: 540px;
+    position: relative;
+}
+
+.image1aftermain1 {
+    z-index: 2;
+    width: 400px;
+    height:266;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+.first .aftermain1 .yellowback {
+    position: absolute;
+    width: 402px;
+    height: 266px;
+    background-color: rgb(210, 210, 67);
+    z-index: 1;
+    top: 165px;
+    left: 115px;
+}
+
+.first .aftermain1 .paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 185px;
+    right: 780px;
+}
+
+.first .aftermain1 .paragraph .p1 {
+    position: absolute;
+    top: 185px;
+    right: 785px;
+    color: rgba(159,180,255,255);
+    font-weight: bold;
+}
+
+.first .aftermain1 .paragraph .p2 {
+    font-weight: bold;
+    font-size: 60px;
+    position: absolute;
+    color: white;
+    top: 240px;
+    right: 560px;
+}
+
+.first .aftermain1 .paragraph .p3 {
+    max-width: 641px;
+    position: absolute;
+    color: white;
+    top: 350px;
+    right: 230px;
+}
+
+
+/*###########################################################################################################################################*/
+
+.last .h2inlast {
+    display: block;
+    font-size: 50px;
+    margin-left: 15%;
+    padding: 0px 100px 0px 0px;
+}
+
+.last .main {
+    position: relative;
+    background-color: #f5efef;
+    padding: 10px 20px;
+    display: block;
+    left: 600px;
+    width: 800px;
+}
+
+.last .temp {
+    position: relative;
+    left: 620px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    display: block;
+    width: 750px;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
+
+.last .templ {
+    position: relative;
+    left: 620px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 120px;
+    display: block;
+    width: 750px;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background-color: rgba(27,32,33,255);
+    color:white;
+    display:flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.footer .f h4{
+    font-size: 25px;
+}
+
+.footer .f p.adress{
+    padding-top: 25px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.footer .ff{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width:300px;
+}
+
+.footer  h4{
+    letter-spacing: 2px;
+    font-size: large;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
+.footer .ff p{
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.footer .ff i {
+    color:rgba(153,255,205,255);
+    padding-right: 5px;
+}
+
+.footer .fff{
+    display:flex;
+    flex-direction: column;
+}
+
+.footer .fff ul{
+    list-style-type: none;
+}
+
+.footer .fff ul li {
+
+    padding-bottom: 16px;
+}
+
+.footer .fff ul li a{
+    color:white;
+}
+
+.footer .fff ul li a:hover{
+    color:rgba(74, 74, 74, 0.614);
+}
+
+.footer .ffff{
+    display:flex;
+    flex-direction: column;
+}
+
+footer .ffff a{
+    color:white;
+    padding-bottom: 20px;
+}
+
+footer .ffff a:hover{
+    color:rgba(74, 74, 74, 0.614);
+}
+
+footer .ffff a i{
+    color:rgba(153,255,205,255);
+}

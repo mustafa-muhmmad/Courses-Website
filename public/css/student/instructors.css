@@ -1,0 +1,224 @@
+/* General Reset */
+
+@font-face {
+    font-family: font;
+    src: url(Fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
+* {
+    font-family: font;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Navigation styling */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(248, 248, 248, 255);
+}
+
+.navigation li {
+    list-style: none;
+    display: inline-block;
+    padding: 13px;
+}
+
+.navigation li:hover {
+    background-color: rgba(0, 0, 0, 0.513);
+    border-radius: 15px;
+}
+
+.navigation li.login {
+    background-color: rgba(88, 188, 155, 0.5);
+    border-radius: 15px;
+}
+
+.navigation li a {
+    color: white;
+    font-weight: 500;
+}
+
+.navigation li a:hover {
+    color: rgba(153, 255, 205, 255);
+}
+
+/* Section A styling */
+.A {
+    background-image: url('../../images/5.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    margin-bottom: 120px;
+    /* padding-bottom: 600px; */
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.f1 , .f2 , .f3 {
+    text-align: center;
+    padding: 15px;
+}
+
+.A1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* #################################################################################################################################### */
+
+.instructor-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.instructor-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.instructor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instructor-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px); /* Three cards per row */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.instructor-card:hover {
+    transform: translateY(-5px);
+}
+
+.instructor-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.instructor-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .instructor-card {
+        width: calc(50% - 20px); /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .instructor-card {
+        width: 100%; /* 1 card per row on small screens */
+    }
+}
+
+/* #################################################################################################################################### */
+.footer {
+    background-color: rgba(27, 32, 33, 255);
+    color: white;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    margin-top: 120px;
+}
+
+.footer .f h4 {
+    font-size: 25px;
+}
+
+.footer .f p.adress {
+    padding-top: 25px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.footer .ff {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+}
+
+.footer h4 {
+    letter-spacing: 2px;
+    font-size: large;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
+.footer .ff p {
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.footer .ff i {
+    color: rgba(153, 255, 205, 255);
+}
+
+.footer .fff {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .fff ul {
+    list-style-type: none;
+}
+
+.footer .fff ul li {
+    padding-bottom: 16px;
+}
+
+.footer .fff ul li a {
+    color: white;
+}
+
+.footer .fff ul li a:hover {
+    color: rgba(74, 74, 74, 0.614);
+}
+
+.footer .ffff {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .ffff a {
+    color: white;
+    padding-bottom: 20px;
+}
+
+footer .ffff a:hover {
+    color: rgba(74, 74, 74, 0.614);
+}
+
+footer .ffff a i {
+    color: rgba(153, 255, 205, 255);
+}

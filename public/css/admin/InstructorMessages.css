@@ -1,0 +1,350 @@
+/* Global Styles */
+@font-face {
+    font-family: font;
+    src: url(Fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
+* {
+    font-family: font;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Navigation styling */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(248, 248, 248, 255);
+}
+
+.navigation li {
+    list-style: none;
+    display: inline-block;
+    padding: 13px;
+}
+
+.navigation li:hover {
+    background-color: rgba(0, 0, 0, 0.513);
+    border-radius: 15px;
+}
+
+.navigation li.login {
+    background-color: rgba(88, 188, 155, 0.5);
+    border-radius: 15px;
+}
+
+.navigation li a {
+    color: white;
+    font-weight: 500;
+}
+
+.navigation li a:hover {
+    color: rgba(153, 255, 205, 255);
+}
+
+/* Section A styling */
+.A {
+    background-image: url('../../images/5.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    text-align: center;
+}
+
+.f1, .f2, .f3 {
+    text-align: center;
+    padding: 15px;
+}
+
+.A1, .A2, .A3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Instructors Section */
+.instructor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centering if less than 3 */
+}
+
+.c1 {
+    width: calc(30% - 20px);
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.c1:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.c1 img {
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+}
+
+.c1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.c1 ul li {
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: rgba(27, 32, 33, 255);
+    color: white;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.footer .f h4 {
+    font-size: 25px;
+}
+
+.footer .f p.adress {
+    padding-top: 25px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.footer .ff {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+}
+
+.footer h4 {
+    letter-spacing: 2px;
+    font-size: large;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
+.footer .ff p {
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.footer .ff i {
+    color: rgba(153, 255, 205, 255);
+}
+
+.footer .fff {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .fff ul {
+    list-style-type: none;
+}
+
+.footer .fff ul li {
+    padding-bottom: 16px;
+}
+
+.footer .fff ul li a {
+    color: white;
+}
+
+.footer .fff ul li a:hover {
+    color: rgba(74, 74, 74, 0.614);
+}
+
+.footer .ffff {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .ffff a {
+    color: white;
+    padding-bottom: 20px;
+}
+
+footer .ffff a:hover {
+    color: rgba(74, 74, 74, 0.614);
+}
+
+footer .ffff a i {
+    color: rgba(153, 255, 205, 255);
+}
+
+
+
+h1 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 90%;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'font', sans-serif;
+}
+
+thead {
+    background-color: #28a745; /* Use a modern green color for the header */
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+}
+
+th,
+td {
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+tbody tr:hover {
+    background-color: #f1f3f5; /* Smooth gray hover effect */
+    transform: translateY(-3px); /* Slight 3D lift effect on hover */
+    transition: all 0.3s ease;
+}
+
+th:first-child, td:first-child {
+    border-top-left-radius: 12px;
+}
+
+th:last-child, td:last-child {
+    border-top-right-radius: 12px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+img {
+    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+form {
+    display: inline;
+}
+
+form button {
+    background-color: #DC3545;
+    padding: 8px 16px;
+}
+
+form button:hover {
+    background-color: #b52a36;
+}
+
+a button {
+    margin: 5px 0;
+}
+
+a button:first-child {
+    margin-left: 0;
+}
+
+a button:last-child {
+    margin-right: 0;
+}
+
+
+/* Add this CSS for the 'Add Course' button */
+.addbutton {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.addbutton button {
+    background-color: #28a745; /* Stylish green color */
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    cursor: pointer;
+    border-radius: 8px; /* More rounded corners */
+    font-size: 18px; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a nice lifted effect */
+}
+
+.addbutton button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More intense shadow on hover */
+}

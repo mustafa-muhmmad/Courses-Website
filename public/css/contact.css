@@ -1,0 +1,143 @@
+@font-face {
+    font-family: font;
+    src: url(Fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
+* {
+    font-family: 'font';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #333;
+}
+
+.header-nav {
+    background-image: url('../images/5.jpeg');
+    background-size: cover;
+    padding-top: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    height: 285px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.navigation,
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(248, 248, 248, 255);
+}
+
+.navigation li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+}
+
+.navigation li:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+.navigation li.login {
+    background-color: rgba(88, 188, 155, 0.5);
+    border-radius: 15px;
+}
+
+.navigation li a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navigation li a:hover {
+    color: rgba(153, 255, 205, 255);
+}
+
+.header-content {
+    color: aliceblue;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.wee5 {
+    color: rgb(159,180,255);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.wee3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.wee {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.wee2 {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.wee2 h5 {
+    color: #63E6BE;
+}
+
+.wee2 h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.wee2 input[type="text"],
+.wee2 input[type="email"],
+.wee2 input[type="submit"] {
+    width: calc(100% - 40px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.wee2 input[type="submit"] {
+    background-color: #63E6BE;
+    color: white;
+    cursor: pointer;
+}
+
+.wee2 input[type="submit"]:hover {
+    background-color: #4CB8A9;
+}

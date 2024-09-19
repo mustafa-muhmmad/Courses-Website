@@ -1,0 +1,472 @@
+@font-face {
+    font-family: font;
+    src: url(Fonts/KumbhSans-VariableFont_YOPQ\wght.ttf);
+}
+
+* {
+    font-family: "font";
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+header {
+    background-image: url('../../images/5.jpeg');/**###################################################################### */
+    background-size: cover;
+    padding-top: 15px;
+    padding-bottom: 65px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(248, 248, 248, 255);
+}
+
+.navigation li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.navigation li:hover {
+    background-color: rgba(0, 0, 0, 0.513);
+}
+
+.navigation li.login {
+    background-color: rgba(88, 188, 155, 0.5);
+    border-radius: 15px;
+}
+
+.navigation li a {
+    color: white;
+    font-weight: 500;
+}
+
+.navigation li a:hover {
+    color: rgba(153, 255, 205, 255);
+}
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slogan .img img {
+    padding-top: 60px;
+    height: 700px;
+    width: 420px;
+    filter: drop-shadow(20px 20px rgba(255, 211, 110, 255));
+    margin-left: 60px;
+}
+
+.slogan .speach {
+    color: rgba(248, 248, 248, 255);
+}
+
+.speach {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+}
+
+.speach p.Learn {
+    color: rgba(159, 180, 255, 255);
+    font-weight: 200;
+    font-size: medium;
+    font-weight: 500;
+    padding-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.speach p.level {
+    font-weight: 200;
+    font-size: 70px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.register {
+    background-color: rgba(227, 226, 226, 0.366);
+}
+
+.register .text {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.register .text h2 {
+    font-size: 40px;
+}
+
+.register .text p {
+    font-size: 25px;
+}
+
+.register .signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.register .signup .icon {
+    background-color: rgb(159, 180, 255);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: black;
+}
+
+.register .signup .s {
+    font-size: 35px;
+    margin-top: 4px;
+    padding-top: 4px;
+    color: black;
+    font-weight: 600;
+}
+
+.register .signup .icon:hover {
+    transform: scale(1.1);
+    /* Increase size of the icon on hover */
+    transition: transform 0.3s ease;
+    /* Smooth transition effect */
+}
+
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.features .slogan2 {
+    width: 500px;
+}
+
+.features .img2 img {
+    height: 360px;
+    width: 560px;
+}
+
+.slogan2 p.feature {
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+}
+
+.slogan2 p.l {
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.slogan2 ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.slogan2 ul li {
+    margin-bottom: 10px;
+    padding-left: 40px;
+    padding-bottom: 5px;
+    font-weight: 400;
+}
+
+.slogan2 ul li i {
+    color: rgb(129, 147, 212);
+    padding-right: 10px;
+}
+
+.features .img2 .active {
+    transition: transform 0.3s ease;
+    /* Smooth transition effect */
+}
+
+.features .img2:hover .active {
+    transform: scale(1.1);
+    /* Increase size of the box on hover */
+}
+
+.img2 img {
+    filter: drop-shadow(18px 18px rgba(153, 255, 205, 255));
+}
+
+.img2 {
+    position: relative;
+}
+
+.img2 .active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 210px;
+    background-color: rgba(255, 245, 109, 255);
+    position: absolute;
+    top: 220px;
+    left: -50px;
+}
+
+.img2 .active p.i {
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+}
+
+.img2 .active p.ii {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.img2 .active p.iii {
+    font-weight: 500;
+}
+
+.footer {
+    background-color: rgba(27, 32, 33, 255);
+    color: white;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.footer .f h4 {
+    font-size: 25px;
+}
+
+.footer .f p.adress {
+    padding-top: 25px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.footer .ff {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+}
+
+.footer h4 {
+    letter-spacing: 2px;
+    font-size: large;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
+.footer .ff p {
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.footer .ff i {
+    color: rgba(153, 255, 205, 255);
+    padding-right: 5px;
+}
+
+.footer .fff {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .fff ul {
+    list-style-type: none;
+}
+
+.footer .fff ul li {
+    padding-bottom: 16px;
+}
+
+.footer .fff ul li a {
+    color: white;
+}
+
+.footer .fff ul li a:hover {
+    color: rgba(74, 74, 74, 0.614);
+}
+
+.footer .ffff {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .ffff a {
+    color: white;
+    padding-bottom: 20px;
+}
+
+footer .ffff a:hover {
+    color: rgba(74, 74, 74, 0.614);
+}
+
+footer .ffff a i {
+    color: rgba(153, 255, 205, 255);
+}
+
+.testimonials {
+    padding: 40px 0;
+    background-image: url('../../images/5.jpeg');/**############################################################################*/
+    color: #434343;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 25px;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.border {
+    width: 160px;
+    height: 5px;
+    background: #fec42d;
+    margin: 26px auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col {
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.testimonial {
+    background: #fff;
+    padding: 30px;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.stars {
+    color: #fec42d;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 960px) {
+    .col {
+           flex: 100%;
+           max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .col {
+           flex: 100%;
+           max-width: 100%;
+    }
+}
+
+.Blog {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: rgba(227, 226, 226, 0.366);
+}
+
+.Blog img {
+    height: 235px;
+    width: 355px;
+    max-width: 100%;
+}
+
+.c1 a:hover img,
+.c2 a:hover img {
+    transform: scale(1.1);
+    /* Increase size of the image on hover */
+    transition: transform 0.3s ease;
+    /* Smooth transition effect */
+}
+
+.c1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p1,
+.p2,
+.p3,
+.p4 {
+    margin-right: 45px;
+    margin-bottom: 60px;
+    background-color: rgb(255, 255, 255);
+}
+
+a p {
+    color: black;
+    text-align: center;
+    height: 70px;
+    width: 350px;
+    font-size: 20px;
+    padding: 15px;
+    font-weight: 700;
+}
+
+.c2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Blog-t a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    width: 210px;
+    height: 55px;
+    border-style: solid;
+    background-color: #99ffcd;
+    border-color: #99ffcd;
+    border-radius: 2px;
+    color: black;
+    font-weight: 500;
+}
+
+.Blog-t a:hover {
+    background-color: rgb(11, 119, 83);
+    border-color: rgb(11, 119, 83);
+}

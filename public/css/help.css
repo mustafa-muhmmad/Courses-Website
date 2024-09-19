@@ -1,0 +1,584 @@
+@font-face {
+    font-family: font;
+    src: url(Fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
+*{
+    font-family: font;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
+}
+
+.navigation{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(248,248,248,255);
+}
+
+.navigation li{
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+}
+
+
+
+.navigation li:hover {
+    background-color: rgba(0, 0, 0, 0.513);
+    border-radius: 15px;
+    transition-duration: 0.8s;
+}
+
+.navigation li.login{
+    background-color: rgba(88, 188, 155, 0.5);
+    border-radius: 15px;
+}
+
+.navigation li a{
+    color: white;
+    font-weight: 500;
+}
+
+.navigation li a:hover{
+    color:rgba(153,255,205,255);
+}
+
+.first {
+    background-image: url("../images/5.jpeg");
+}
+
+.aftermain1 {
+    display: flex;
+    height: 540px;
+    position: relative;
+}
+
+.image1aftermain1 {
+    z-index: 2;
+    width: 400px;
+    height:266;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+.first .aftermain1 .yellowback {
+    position: absolute;
+    width: 402px;
+    height: 266px;
+    background-color: rgb(210, 210, 67);
+    z-index: 1;
+    top: 165px;
+    left: 115px;
+}
+
+.first .aftermain1 .paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 185px;
+    right: 780px;
+}
+
+.first .aftermain1 .paragraph .p1 {
+    position: absolute;
+    top: 185px;
+    right: 785px;
+    color: rgba(159,180,255,255);
+    font-weight: bold;
+}
+
+.first .aftermain1 .paragraph .p2 {
+    font-weight: bold;
+    font-size: 60px;
+    position: absolute;
+    color: white;
+    top: 240px;
+    right: 560px;
+}
+
+.first .aftermain1 .paragraph .p3 {
+    max-width: 641px;
+    position: absolute;
+    color: white;
+    top: 350px;
+    right: 230px;
+}
+
+.second {
+    margin: 100px 0px;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(248, 248, 248, 255);
+    padding-top: 50px;
+}
+
+.second .h2insecond {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 60px;
+}
+
+.second .pmaininsecond {
+    flex-basis: auto;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-top: 10px;
+}
+
+.second .topicsinsecond {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
+}
+
+.second .topicsinsecond .topic1 {
+    position: relative;
+    flex-basis: calc(100% / 3);
+    left: 300px;
+    height: 80px;
+}
+
+.second .topicsinsecond .topic1 .imagetopic1 img:hover {
+    margin-right: 20px;
+    cursor: pointer;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    transition-property: all;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.second .topicsinsecond .topic1 .imagetopic1 {
+    display: inline;
+    width: 80px;
+    height: 80px;
+}
+
+.second .topicsinsecond .topic1 .topic1p1 {
+    position: absolute;
+    padding: 10px 0px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline;
+}
+
+.second .topicsinsecond .topic1 .topic1p1 a {
+    color: black;
+}
+
+.second .topicsinsecond .topic1 .topic1p2 {
+    position: absolute;
+    max-width: 270px;
+    margin: 50px 30px ;
+    display: inline;
+}
+
+.second .topicsinsecond .topic2 {
+    position: relative;
+    flex-basis: calc(100% / 3);
+    left: 200px;
+    height: 80px;
+}
+
+.second .topicsinsecond .topic2 .imagetopic2 img:hover {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    transition-property: all;
+}
+
+
+.second .topicsinsecond .topic2 .imagetopic2 {
+    display: inline;
+    width: 80px;
+    height: 80px;
+}
+
+.second .topicsinsecond .topic2 .topic2p1 {
+    position: absolute;
+    padding: 10px 0px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline;
+}
+
+.second .topicsinsecond .topic2 .topic2p1 a {
+    color: black;
+}
+
+.second .topicsinsecond .topic2 .topic2p2 {
+    position: absolute;
+    max-width: 270px;
+    margin: 50px 30px ;
+    display: inline;
+}
+
+.second .topicsinsecond .topic3 {
+    position: relative;
+    flex-basis: calc(100% / 3);
+    left: 70px;
+    height: 80px;
+}
+
+.second .topicsinsecond .topic3 .imagetopic3 img:hover {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    transition-property: all;
+}
+
+.second .topicsinsecond .topic3 .imagetopic3 {
+    display: inline;
+    width: 80px;
+    height: 80px;
+}
+
+.second .topicsinsecond .topic3 .topic3p1 {
+    position: absolute;
+    padding: 10px 0px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline;
+}
+
+.second .topicsinsecond .topic3 .topic3p1 a {
+    color: black;
+}
+
+.second .topicsinsecond .topic3 .topic3p2 {
+    position: absolute;
+    max-width: 270px;
+    margin: 50px 30px ;
+    display: inline;
+}
+
+
+.second .remindertopic {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 100px;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+.second .remindertopic .topic4 {
+    margin-top: 50px;
+    position: relative;
+    flex-basis: calc(100% / 3);
+    left: 300px;
+    height: 80px;
+
+}
+
+.second .remindertopic .topic4 .imagetopic4 img:hover {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    transition-property: all;
+}
+
+.second .remindertopic .topic4 .imagetopic4 {
+    display: inline;
+    width: 80px;
+    height: 80px;
+}
+
+.second .remindertopic .topic4 .topic4p1 {
+    position: absolute;
+    padding: 10px 0px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline;
+}
+
+.second .remindertopic .topic4 .topic4p1 a {
+    color: black;
+}
+
+.second .remindertopic .topic4 .topic4p2 {
+    position: absolute;
+    max-width: 270px;
+    margin: 50px 30px ;
+    display: inline;
+}
+
+.second .remindertopic .topic5 {
+    margin-top: 50px;
+    position: relative;
+    flex-basis: calc(100% / 3);
+    left: 150px;
+    height: 80px;
+    margin-left: 150px;
+}
+
+.second .remindertopic .topic5 .imagetopic5 img:hover {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    transition-property: all;
+}
+
+.second .remindertopic .topic5 .topic5p1 {
+    position: absolute;
+    padding: 10px 0px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline;
+}
+
+.second .remindertopic .topic5 .imagetopic5 {
+    display: inline;
+    width: 80px;
+    height: 80px;
+}
+
+.second .remindertopic .topic5 .topic5p1 a {
+    color: black;
+}
+
+.second .remindertopic .topic5 .topic5p2 {
+    position: absolute;
+    max-width: 270px;
+    margin: 50px 30px ;
+    display: inline;
+}
+
+.second .remindertopic .topic6 {
+    margin-top: 50px;
+    position: relative;
+    flex-basis: calc(100% / 3);
+    left: -30px;
+    height: 80px;
+    margin-left: 150px;
+}
+
+.second .remindertopic .topic6 .imagetopic6 img:hover {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
+    transition-property: all;
+}
+
+.second .remindertopic .topic6 .imagetopic6 {
+    display: inline;
+    width: 80px;
+    height: 80px;
+}
+
+.second .remindertopic .topic6 .topic6p1 {
+    position: absolute;
+    padding: 10px 0px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline;
+}
+
+.second .remindertopic .topic6 .topic6p1 a {
+    color: black;
+}
+
+.second .remindertopic .topic6 .topic6p2 {
+    position: absolute;
+    max-width: 270px;
+    margin: 50px 30px ;
+    display: inline;
+ }
+/*###########################################################################################################################################*/
+
+.last .h2inlast {
+    display: block;
+    font-size: 50px;
+    margin-left: 15%;
+    padding: 0px 100px 0px 0px;
+}
+
+.last .main {
+    position: relative;
+    background-color: #f5efef;
+    padding: 10px 20px;
+    display: block;
+    left: 600px;
+    width: 800px;
+}
+
+.last .temp {
+    position: relative;
+    left: 620px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    display: block;
+    width: 750px;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
+
+.last .templ {
+    position: relative;
+    left: 620px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 120px;
+    display: block;
+    width: 750px;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
+
+.imagetopic1 img:hover,
+.imagetopic2 img:hover,
+.imagetopic3 img:hover,
+.imagetopic4 img:hover,
+.imagetopic5 img:hover,
+.imagetopic6 img:hover {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition-duration: 0.8s; /* Change the duration to your desired value */
+    transition-timing-function: linear;
+    transition-property: all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background-color: rgba(27,32,33,255);
+    color:white;
+    display:flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.footer .f h4{
+    font-size: 25px;
+}
+
+.footer .f p.adress{
+    padding-top: 25px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.footer .ff{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width:300px;
+}
+
+.footer  h4{
+    letter-spacing: 2px;
+    font-size: large;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
+.footer .ff p{
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.footer .ff i {
+    color:rgba(153,255,205,255);
+    padding-right: 5px;
+}
+
+.footer .fff{
+    display:flex;
+    flex-direction: column;
+}
+
+.footer .fff ul{
+    list-style-type: none;
+}
+
+.footer .fff ul li {
+
+    padding-bottom: 16px;
+}
+
+.footer .fff ul li a{
+    color:white;
+}
+
+.footer .fff ul li a:hover{
+    color:rgba(74, 74, 74, 0.614);
+}
+
+.footer .ffff{
+    display:flex;
+    flex-direction: column;
+}
+
+footer .ffff a{
+    color:white;
+    padding-bottom: 20px;
+}
+
+footer .ffff a:hover{
+    color:rgba(74, 74, 74, 0.614);
+}
+
+footer .ffff a i{
+    color:rgba(153,255,205,255);
+}
