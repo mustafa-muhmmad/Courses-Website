@@ -14,7 +14,7 @@
             </a>
         </div>
         <div class="input">
-            @if ($errors->any())
+            <!-- @if ($errors->any())
                 <div class="error-messages">
                     <ul>
                         @foreach ($errors->all() as $error)
@@ -22,25 +22,34 @@
                         @endforeach
                     </ul>
                 </div>
-            @endif
+            @endif -->
 
             <form action="{{ route('studentRegister.register') }}" method="POST">
                 @csrf
                 <div class="p">
                     <input type="text" placeholder="User name" name="name" required >
                     <i class="fa-solid fa-user"></i>
+                    @error('name')
+                        <div class="error-message">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="e">
                     <input type="email" name="email" placeholder="Email" required >
                     <i class="fa-solid fa-envelope"></i>
+                    @error('email')
+                        <div class="error-message">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="p">
                     <input type="password" name="password" placeholder="Password" required>
                     <i class="fa-solid fa-lock"></i>
+                    @foreach ($errors->get('password') as $error)
+                        <div class="error-message">{{ $error }}</div>
+                    @endforeach
                 </div>
                 <div class="e">
-                    <input type="text" name="address" placeholder="Address" >
-                    <i class="fa-solid fa-calendar"></i>
+                    <input type="text" name="address" placeholder="Address" required>
+                    <i class="fa-solid fa-map-marker-alt"></i>
                 </div>
                 <div class="radio-group">
                     <div>
@@ -54,7 +63,7 @@
                 </div>
                 <div class="e">
                     <input type="text" name="phonenumber" placeholder="Phone Number" >
-                    <i class="fa-solid fa-calendar"></i>
+                    <i class="fa-solid fa-phone"></i>
                 </div>
                 <div class="s">
                     <input type="submit" value="Sign up">

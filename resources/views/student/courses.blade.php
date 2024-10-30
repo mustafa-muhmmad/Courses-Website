@@ -81,7 +81,7 @@
                     style="display:inline">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="mycourse-delete">Delete</button>
+                    <button type="submit" class="mycourse-delete">Exit</button>
                 </form>
             </div>
             @endforeach

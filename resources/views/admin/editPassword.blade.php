@@ -15,23 +15,25 @@
             </a>
         </div>
         <div class="input">
-            @if ($errors->any())
-                <div class="error-messages">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
             <form action="{{ route('adminEditPassword.edit') }}" method="POST">
                 @method('put')
                 @csrf
+                <!-- @if ($errors->any())
+                    <div class="error-messages">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif -->
                 <div class="e">
                     <input type="email" placeholder="E-mail" name="email" required >
                     <i class="fa-solid fa-user"></i>
                 </div>
+                @error('email')
+                    <div class="error-message">{{ $message }}</div>
+                @enderror
                 <div class="p">
                     <input type="password" placeholder="New Password" name="password" required>
                     <i class="fa-solid fa-lock"></i>
@@ -40,6 +42,9 @@
                     <input type="password" placeholder="Confirm New Password" name="password_confirmation" required>
                     <i class="fa-solid fa-lock"></i>
                 </div>
+                @foreach ($errors->get('password') as $error)
+                    <div class="error-message">{{ $error }}</div>
+                @endforeach
                 <div class="s">
                     <input type="submit" name="signin" value="Save">
                 </div>

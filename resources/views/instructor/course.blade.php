@@ -84,6 +84,19 @@
             justify-content: center;
             align-items: center;
             padding: 50px 0;
+            min-height: calc(100vh - 500px);
+        }
+
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .course-container p {
+            font-size: 1.5rem;
+            color: #666;
         }
 
         .card {

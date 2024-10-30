@@ -15,16 +15,6 @@
             </a>
         </div>
         <div class="input">
-            @if ($errors->any())
-                <div class="error-messages">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
             <form action="{{ route('instructors.login') }}" method="post">
                 @csrf
                 <div class="e">
@@ -35,6 +25,15 @@
                     <input type="password" placeholder="Password" name="password" required>
                     <i class="fa-solid fa-lock"></i>
                 </div>
+                @if ($errors->any())
+                    <div class="error-messages">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="f">
                     <a href="{{ route('instructorEditPassword-page') }}">Forgot Password?</a>
                 </div>

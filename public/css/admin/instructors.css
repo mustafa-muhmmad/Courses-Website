@@ -328,6 +328,7 @@ a button:last-child {
     margin: 20px auto;
     margin-bottom: 50px;
     text-align: center;
+    width: fit-content;
 }
 
 .addbutton button {

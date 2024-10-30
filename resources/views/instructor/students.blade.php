@@ -30,8 +30,10 @@
 
         .error-message {
             color: red;
-            font-size: 1.2em;
+            font-size: 1.5em;
             margin: 20px 0;
+            text-align:center;
+            margin-top: 60px ;
         }
     </style>
 </head>
@@ -75,38 +77,40 @@
         </div>
     @endif
 
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Gender</th>
-                <th>Phone Number</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @forelse($students as $student)
-            <tr>
-                <td>{{ $student->name }}</td>
-                <td>{{ $student->address }}</td>
-                <td>{{ $student->gender }}</td>
-                <td>{{ $student->phonenumber ? $student->phonenumber : 'Not Exist' }}</td>
-                <td>
-                    <form action="{{ route('instructorDestroyStudents.destroy', $student->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">Delete</button>
-                    </form>
-                </td>
-            </tr>
-            @empty
-            <tr>
-                <td colspan="5">No students found.</td>
-            </tr>
-            @endforelse
-        </tbody>
-    </table>
+    @if ($students->isEmpty())
+        <div class="no-students-message">
+            <p style="color: red; font-size: 1.5em;text-align:center;margin-top:60px;margin-bottom: 60px">No students yet</p>
+        </div>
+    @else
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($students as $student)
+                <tr>
+                    <td>{{ $student->name }}</td>
+                    <td>{{ $student->address }}</td>
+                    <td>{{ $student->gender }}</td>
+                    <td>{{ $student->phonenumber ? $student->phonenumber : 'Not Exist' }}</td>
+                    <td>
+                        <form action="{{ route('instructorDestroyStudents.destroy', $student->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    @endif
 
     <footer class="footer">
         <div class="f">

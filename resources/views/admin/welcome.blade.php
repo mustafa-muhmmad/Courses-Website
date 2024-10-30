@@ -166,7 +166,7 @@
                 <p class="lorem" style="width: 350px; padding-top: 22px; padding-bottom: 22px">
                     Demystifying Online Learning: Finding the Right Courses for You
                 </p>
-                <a href=""> target="_blank">View All Posts
+                <a href="" target="_blank">View All Posts
                     &#8594;</a><!--#########################################################################-->
             </div>
         </div>

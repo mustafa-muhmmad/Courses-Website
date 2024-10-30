@@ -15,6 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Full viewport height */
     background-image: url('../../images/5.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,8 +25,9 @@ body{
     background-color:#09203d;
     color:rgba(247,245,243);
     width: 540px;
-    height: 600px;
-    margin-top: 80px;
+    height: fit-content;
+    /* margin-top: 80px; */
+    padding-bottom: 25px;
 }
 
 .header{
@@ -100,4 +102,28 @@ body{
 
 .d a:hover{
     color:#003e67;
+}
+
+.error-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.1); /* Light red overlay */
+    color: #cc0000; /* Red text for emphasis */
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    /* width: 90%; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 400px; /* Matches the width of the input field */
+}
+
+.error-message ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }

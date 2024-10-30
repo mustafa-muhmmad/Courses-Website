@@ -14,18 +14,17 @@
             </a>
         </div>
         <div class="input">
-            @if ($errors->any())
-                <div class="error-messages">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
             <form action="{{ route('students.store') }}" method="POST">
                 @csrf
+                @if ($errors->any())
+                    <div class="error-messages">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="p">
                     <input type="text" placeholder="User name" name="username" required value="{{ old('username') }}">
                     <i class="fa-solid fa-user"></i>
@@ -35,7 +34,7 @@
                     <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div class="p">
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Password" required >
                     <i class="fa-solid fa-lock"></i>
                 </div>
                 <div class="e">
