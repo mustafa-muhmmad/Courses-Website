@@ -189,9 +189,8 @@ class StudentController extends Controller
     // Displays a list of instructors
     public function showInstructors()
     {
-        // Retrieve all instructors along with their associated courses
-        $instructors = Instructor::with('course')->get();
-
+        // Retrieve instructors who have a course assigned by checking for a non-null relationship
+        $instructors = Instructor::whereHas('course')->with('course')->get();
         return view('student.instructors', compact('instructors'));
     }
 
