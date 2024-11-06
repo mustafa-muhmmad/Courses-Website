@@ -167,7 +167,7 @@
                 <p class="lorem" style="width: 350px; padding-top: 22px; padding-bottom: 22px">
                     Demystifying Online Learning: Finding the Right Courses for You
                 </p>
-                <a href="" target="_blank">View All Posts
+                <a>View All Posts
                     &#8594;</a>
             </div>
         </div>
@@ -175,36 +175,36 @@
         <div class="Blog-p">
             <div class="c1">
                 <div class="p1">
-                    <a href=""><img
+                    <a href="https://blog.skolera.com/free-educational-apps-for-students/" target="_blank"><img
                             src="https://demo.eightheme.com/coursey/wp-content/uploads/sites/18/2022/06/34-768x512.jpg"
                             alt="Browser doesn't support this img" /></a>
-                    <a href="">
+                    <a href="https://blog.skolera.com/free-educational-apps-for-students/" target="_blank">
                         <p>Free Educational Apps For Online Learning</p>
                     </a>
                 </div>
                 <div class="p2">
-                    <a href=""><img
+                    <a href="https://academicsupport.uw.edu/study-skills/online-learning/ten-successful-online-study-habits/"  target="_blank"><img
                             src="https://demo.eightheme.com/coursey/wp-content/uploads/sites/18/2022/06/35-768x512.jpg"
                             alt="Browser doesn't support this img" /></a>
-                    <a href="">
+                    <a href="https://academicsupport.uw.edu/study-skills/online-learning/ten-successful-online-study-habits/"  target="_blank">
                         <p>Ten Successful Online Study Hapits</p>
                     </a>
                 </div>
             </div>
             <div class="c2">
                 <div class="p3">
-                    <a href=""><img
+                    <a href="https://www.oxfordlearning.com/tips-for-studying-at-home/"  target="_blank"><img
                             src="https://demo.eightheme.com/coursey/wp-content/uploads/sites/18/2022/06/36-768x512.jpg"
                             alt="Browser doesn't support this img" /></a>
-                    <a href="">
+                    <a href="https://www.oxfordlearning.com/tips-for-studying-at-home/"  target="_blank">
                         <p>How To Study Effectivly At Home</p>
                     </a>
                 </div>
                 <div class="p4">
-                    <a href=""><img
+                    <a href="https://online.umn.edu/story/15-tips-succeed-online-class"  target="_blank"><img
                             src="https://demo.eightheme.com/coursey/wp-content/uploads/sites/18/2022/06/37-768x512.jpg"
                             alt="Browser doesn't support this img" /></a>
-                    <a href="">
+                    <a href="https://online.umn.edu/story/15-tips-succeed-online-class" target="_blank">
                         <p>Tips For Successful Online Classes</p>
                     </a>
                 </div>

@@ -47,15 +47,15 @@
                 <h1>Let Us Help You Find The Right Path To Success</h1>
                 <form action="{{ route('instructorContactAdmin.contact') }}" method="post">
                     @csrf
-                    <input type="text" name="firstname" require placeholder="First Name">
+                    <input type="text" name="firstname" placeholder="First Name"required>
                     <br>
-                    <input type="text" name="lastname" require placeholder="Last Name">
+                    <input type="text" name="lastname" placeholder="Last Name" required>
                     <br>
                     <input type="email" name="email" require placeholder="Email"
                         value="{{ Session::get('instructor_email') }}" disabled>
                     <br>
-                    <input type="text" name="question" require placeholder="General Question">
-                    <input type="text" name="message" require placeholder="Your message">
+                    <input type="text" name="question" placeholder="General Question" required>
+                    <input type="text" name="message" placeholder="Your message" required>
                     <br>
                     <input type="submit" value="Send Message" name="send">
                 </form>

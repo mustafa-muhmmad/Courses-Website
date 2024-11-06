@@ -177,9 +177,12 @@ class AdminController extends Controller
      */
     public function editCourse($id)
     {
-        $course = Course::findOrFail($id);
-        $instructors = Instructor::with('course')->get();
-
+        // Find the specific course or throw a 404 error if not found
+        $course = Course::with('instructor')->findOrFail($id);
+        // Retrieve instructors who are either unassigned or currently assigned to this course
+        $instructors = Instructor::whereDoesntHave('course')
+                        ->orWhere('id', $course->instructor_id)
+                        ->get();
         return view('admin.edit', compact('course', 'instructors'));
     }
 
@@ -188,10 +191,27 @@ class AdminController extends Controller
      */
     public function updateCourse(Request $request, $id)
     {
+        // Find the course or throw a 404 error if not found
         $course = Course::findOrFail($id);
-        $updatedData = request()->all();
-        $course->update($updatedData);
+        // Validate input data
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255|unique:courses,name,' . $id,
+            'link' => 'required|url|unique:courses,link,' . $id,  // Allows the link to be unique, excluding the current course
+            'description' => 'string|min:15',
+            'instructor_id' => 'nullable|exists:instructors,id',
+        ]);
+        // Check if a course with the same name already exists, excluding the current course
+        $existingCourse = Course::where('name', $request->input('name'))
+                                ->where('id', '!=', $id)
+                                ->first();
+        if ($existingCourse) {
+            return redirect()->back()->withErrors(['name' => 'A course with this name already exists.']);
+        }
 
+        // Update the course with validated data
+        $course->update($validatedData);
+
+        // Redirect to the courses page
         return to_route('adminscourses-page');
     }
 
@@ -283,30 +303,60 @@ class AdminController extends Controller
      */
     public function editInstructor($id)
     {
-        $instructor = Instructor::findOrFail($id);
-        $courses = Course::whereNull('instructor_id')->get();
+        $instructor = Instructor::with('course')->findOrFail($id);
+
+        $courses = Course::whereNull('instructor_id')
+                        ->orWhere('instructor_id', $instructor->id)
+                        ->get();
 
         return view('admin.editinstructor', compact('instructor', 'courses'));
     }
+
 
     /**
      * Update instructor information and their course assignments
      */
     public function updateInstructor(Request $request, $id)
     {
+        // Validate the input data
+        $validatedData = $request->validate([
+            'name' => 'required|string|min:3|max:255',
+            'email' => 'required|email|unique:instructors,email,' . $id,
+            'password' => [
+                'required',
+                'string',
+                'min:8',
+                'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#+-])[A-Za-z\d@$!%*?&#+-]{8,}$/',
+            ], // Password must be at least 8 characters, with 1 uppercase, 1 number, and 1 special character
+            'phonenumber' => 'nullable|digits:11', // Ensure phone number is exactly 11 digits if provided
+            'gender' => 'required|in:male,female',
+            'course_id' => 'nullable|exists:courses,id',
+        ], [
+            // Custom message for the password validation
+            'password.min' => 'Password must be at least 8 characters long.',
+            'password.regex' => 'Password must be contain at least one uppercase letter, one lowercase letter, one number, and one special character (e.g., @$!%*?&#+-).',
+        ]);
+        // Find the instructor by ID
         $instructor = Instructor::findOrFail($id);
-        $updatedData = request()->all();
-        $instructor->update($updatedData);
-
-        $course = Course::findOrFail($request->input('course_id'));
-        $course->update(['instructor_id' => $instructor->id]);
-
-        Course::where('instructor_id', $instructor->id)
-            ->where('id', '!=', $course->id)
-            ->update(['instructor_id' => null]);
+        // Update instructor data
+        $instructor->update($validatedData);
+        // Check if a course is selected
+        if ($request->filled('course_id')) {
+            // Find the selected course and assign the instructor
+            $course = Course::findOrFail($request->input('course_id'));
+            $course->update(['instructor_id' => $instructor->id]);
+            // Set other courses' instructor_id to null
+            Course::where('instructor_id', $instructor->id)
+                ->where('id', '!=', $course->id)
+                ->update(['instructor_id' => null]);
+        } else {
+            // If no course is selected, remove the instructor from any course
+            Course::where('instructor_id', $instructor->id)->update(['instructor_id' => null]);
+        }
 
         return to_route('adminsinstructor-page');
     }
+
 
     /**
      * Show form to create a new instructor

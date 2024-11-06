@@ -169,6 +169,7 @@
         @error('course_id')
             <div class="error-message">{{ $message }}</div>
         @enderror
+
         <div class="buttons">
             <div style="margin-top: 20px;">
                 <a href="{{ url()->previous() }}" class="back-button">Back</a>

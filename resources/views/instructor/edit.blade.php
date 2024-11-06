@@ -112,7 +112,7 @@
 
         <div class="buttons">
             <div >
-                <a href="{{ url()->previous() }}" class="back-button">Back</a>
+                <a href="{{ route('instructorscourse-page') }}" class="back-button">Back</a>
             </div>
             <div class="form-submit">
                 <input type="submit" value="Save">
